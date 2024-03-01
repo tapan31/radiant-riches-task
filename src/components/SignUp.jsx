@@ -3,7 +3,7 @@ import React from "react";
 function SignUp() {
   return (
     <section className="flex items-center justify-between py-4">
-      <h3 className="text-2xl">
+      <h3 className="text-xl md:text-2xl">
         Sign up and get exclusive <br />
         special deals
       </h3>

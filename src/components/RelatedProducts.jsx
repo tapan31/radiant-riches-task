@@ -30,8 +30,10 @@ const products = [
 function RelatedProducts() {
   return (
     <section className="py-9">
-      <h2 className="text-3xl ">Related deals you might like for</h2>
-      <div className="flex items-center justify-between gap-5">
+      <h2 className="mb-5 text-center text-3xl md:text-left">
+        Related deals you might like for
+      </h2>
+      <div className="flex flex-col items-center gap-5 md:flex-row ">
         {products.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}

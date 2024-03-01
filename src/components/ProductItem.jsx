@@ -18,15 +18,17 @@ function ProductItem({ product }) {
   } = product;
 
   return (
-    <div className="relative grid grid-cols-[1fr_2fr_1fr] items-center justify-items-center gap-8">
+    <div className="relative grid items-center gap-4  md:grid-cols-[1fr_2fr_1fr] md:justify-items-center md:gap-8">
       {bestChoice && (
         <p className="absolute -top-3 left-0 flex items-center gap-1 rounded-r-md bg-orange-500 px-2 py-1 text-sm text-orange-50">
           <img src={diamond} alt="" /> <span>Best Choice</span>
         </p>
       )}
-      <div className="flex flex-col items-center gap-3">
-        <img src={ProductImg} alt="Product" />
-        <p className="text-sm text-stone-400">Builder 1</p>
+      <div className="flex flex-col items-center  gap-3">
+        <img src={ProductImg} alt="Product" className="w-1/2 md:w-full" />
+        <p className="hidden text-center text-sm text-stone-400 md:block">
+          Builder 1
+        </p>
       </div>
       <div>
         <p>
@@ -56,7 +58,7 @@ function ProductItem({ product }) {
             <p className="mb-1">Why we love it</p>
             <div>
               {weLoveIt.map((item) => (
-                <div className="flex items-center gap-2">
+                <div key={item} className="flex items-center gap-2">
                   <img src={Tick}></img>
                   <p>{item}</p>
                 </div>
@@ -68,7 +70,7 @@ function ProductItem({ product }) {
         <ShowMoreButton />
       </div>
       <div className="flex flex-col items-center gap-10">
-        <div className="w-32 space-y-2 rounded-md bg-blue-50 px-4 py-2 text-center">
+        <div className="hidden w-32 space-y-2 rounded-md bg-blue-50 px-4 py-2 text-center md:block">
           <p className="text-3xl font-medium text-blue-800">{rating}</p>
           <p className="text-sm font-semibold text-blue-700">
             {ratingDescription}

@@ -3,7 +3,7 @@ import Button from "./Button";
 
 function calculateDiscountedPrice(price, offer) {
   const discountedPrice = Number(price) - Number(price) * (Number(offer) / 100);
-  console.log(discountedPrice, price, offer);
+  //   console.log(discountedPrice, price, offer);
   return discountedPrice.toFixed(2);
 }
 
@@ -11,9 +11,9 @@ function ProductCard({ product }) {
   const { name, description, price, offer, limitedTime } = product;
 
   return (
-    <div className="flex flex-col gap-2 px-4 py-2">
+    <div className="flex flex-col gap-2 rounded-md border border-stone-300 px-4 pb-4 md:border-0">
       <div className="self-center px-4 py-6">
-        <img src={ProductImg} alt="" />
+        <img src={ProductImg} alt="" className="w-full" />
       </div>
       <div className="space-x-2">
         {offer && (

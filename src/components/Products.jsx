@@ -75,7 +75,7 @@ const products = [
 
 function Products() {
   return (
-    <section className="my-5 space-y-11 pt-4">
+    <section className="my-5 space-y-16 pt-4  md:space-y-11 ">
       {products.map((product) => (
         <ProductItem key={product.id} product={product} />
       ))}

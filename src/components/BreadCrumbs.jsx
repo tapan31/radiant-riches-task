@@ -2,7 +2,7 @@ const arr = ["Home", "Hosting For All", "Hosting", "Hosting6", "Hosting5"];
 
 function BreadCrumbs() {
   return (
-    <div className="flex items-center justify-start py-2">
+    <div className="hidden items-center justify-start py-2 sm:flex">
       {arr.map((item, index) => {
         return (
           <div key={index} className="flex items-center gap-2">
